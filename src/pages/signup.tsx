@@ -1,6 +1,6 @@
 // components/SignupPage.tsx
 import Link from 'next/link';
-import SignupForm from '../../components/SignupForm';
+import SignupForm from '../components/SignupForm';
 
 const signup = () => {
     return (
