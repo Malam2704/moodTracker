@@ -25,11 +25,15 @@ const SignupForm = () => {
     };
 
     return (
-        <div>
-            <h2>Create an Account</h2>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="firstName">First Name:</label>
+        <div className="min-h-screen flex items-start justify-center">
+            <form
+                onSubmit={handleSubmit}
+                className="bg-white p-8 rounded-lg shadow-lg sm:m-10 md:w-2/3 lg:w-400px mt-8"
+            >
+                <div className="mb-4">
+                    <label htmlFor="firstName" className="block text-gray-700 font-bold">
+                        First Name:
+                    </label>
                     <input
                         type="text"
                         id="firstName"
@@ -37,10 +41,13 @@ const SignupForm = () => {
                         value={formData.firstName}
                         onChange={handleChange}
                         required
+                        className="border border-gray-300 rounded-lg px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-300"
                     />
                 </div>
-                <div>
-                    <label htmlFor="lastName">Last Name:</label>
+                <div className="mb-4">
+                    <label htmlFor="lastName" className="block text-gray-700 font-bold">
+                        Last Name:
+                    </label>
                     <input
                         type="text"
                         id="lastName"
@@ -48,10 +55,13 @@ const SignupForm = () => {
                         value={formData.lastName}
                         onChange={handleChange}
                         required
+                        className="border border-gray-300 rounded-lg px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-300"
                     />
                 </div>
-                <div>
-                    <label htmlFor="email">Email:</label>
+                <div className="mb-4">
+                    <label htmlFor="email" className="block text-gray-700 font-bold">
+                        Email:
+                    </label>
                     <input
                         type="email"
                         id="email"
@@ -59,10 +69,13 @@ const SignupForm = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
+                        className="border border-gray-300 rounded-lg px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-300"
                     />
                 </div>
-                <div>
-                    <label htmlFor="username">Username:</label>
+                <div className="mb-4">
+                    <label htmlFor="username" className="block text-gray-700 font-bold">
+                        Username:
+                    </label>
                     <input
                         type="text"
                         id="username"
@@ -70,10 +83,13 @@ const SignupForm = () => {
                         value={formData.username}
                         onChange={handleChange}
                         required
+                        className="border border-gray-300 rounded-lg px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-300"
                     />
                 </div>
-                <div>
-                    <label htmlFor="password">Password:</label>
+                <div className="mb-4">
+                    <label htmlFor="password" className="block text-gray-700 font-bold">
+                        Password:
+                    </label>
                     <input
                         type="password"
                         id="password"
@@ -81,10 +97,13 @@ const SignupForm = () => {
                         value={formData.password}
                         onChange={handleChange}
                         required
+                        className="border border-gray-300 rounded-lg px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-300"
                     />
                 </div>
-                <div>
-                    <label htmlFor="dob">Date of Birth:</label>
+                <div className="mb-4">
+                    <label htmlFor="dob" className="block text-gray-700 font-bold">
+                        Date of Birth:
+                    </label>
                     <input
                         type="date"
                         id="dob"
@@ -92,15 +111,21 @@ const SignupForm = () => {
                         value={formData.dob}
                         onChange={handleChange}
                         required
+                        className="border border-gray-300 rounded-lg px-3 py-2 w-full focus:outline-none focus:ring focus:border-blue-300"
                     />
                 </div>
-                <div>
-                    <button type="submit">Create Account</button>
+                <div className="mb-4 flex flex-col items-center">
+                    <button
+                        type="submit"
+                        className="bg-pink-600 text-white rounded-lg px-4 py-2 hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300 m-4"
+                    >
+                        Create Account
+                    </button>
+                    <Link href="/" className='mt-4'> {/* Redirect to the home page */}
+                        <a className="text-pink-600 hover:underline">Already Have an Account?</a>
+                    </Link>
                 </div>
             </form>
-            <Link href="/"> {/* Redirect to the home page */}
-                <a>Back to Home</a>
-            </Link>
         </div>
     );
 };

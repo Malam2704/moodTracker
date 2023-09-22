@@ -59,7 +59,7 @@ const LoginForm = () => {
                 <div className="mb-4">
                     <button
                         type="submit"
-                        className="bg-blue-500 text-white rounded-lg px-4 py-2 hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
+                        className="bg-pink-600 text-white rounded-lg px-4 py-2 hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
                     >
                         Login
                     </button>

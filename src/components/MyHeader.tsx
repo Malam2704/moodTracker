@@ -9,7 +9,7 @@ const MyHeader = () => {
                 <p className='text-white text-4xl font-bold ml-2'>mOOD TRACKER</p>
             </nav>
 
-            <h2 className='text-lg font-semibold m-4 text-center m-20 text-2xl' style={{ fontSize: '24px' }}>
+            <h2 className='font-semibold mt-10 mb-5 text-center' style={{ fontSize: '40px' }}>
                 mOOD TRACKER
             </h2>
         </>
