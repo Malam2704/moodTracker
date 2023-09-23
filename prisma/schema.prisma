@@ -1,0 +1,27 @@
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "./generated/client"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("mongodb+srv://mohammedal2144:<password>@cluster0.pitikbk.mongodb.net/") // Replace with your MongoDB Atlas connection string
+}
+
+// Define your data model here
+model User {
+  id       String   @id @map("_id") @default(auto()) @test.Unique
+  name     String
+  email    String   @unique
+  posts    Post[]
+}
+
+model Post {
+  id        String   @id @map("_id") @default(auto()) @test.Unique
+  title     String
+  content   String
+  author    User     @relation(fields: [authorId], references: [id])
+  authorId  String
+}
