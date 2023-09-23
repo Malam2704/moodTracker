@@ -12,16 +12,18 @@ datasource db {
 
 // Define your data model here
 model User {
-  id       String   @id @map("_id") @default(auto()) @test.Unique
-  name     String
+  id       String @id @map("_id")
+  firstName     String
+  lastName      String
   email    String   @unique
-  posts    Post[]
+  username String
+  password String
+  dob   String
 }
 
-model Post {
-  id        String   @id @map("_id") @default(auto()) @test.Unique
-  title     String
-  content   String
-  author    User     @relation(fields: [authorId], references: [id])
-  authorId  String
+model MoodPost {
+ id       String @id @map("_id")
+ Date       String  
+  Rating   String
+  Notes   String
 }
