@@ -130,7 +130,7 @@ const SignupForm = () => {
                         Create Account
                     </button>
                     <Link href="/"> {/* Redirect to the home page */}
-                        <a className="text-pink-600 hover:underline">Already Have an Account?</a>
+                        <p className="text-pink-600 hover:underline">Already Have an Account?</p>
                     </Link>
                 </div>
             </form>

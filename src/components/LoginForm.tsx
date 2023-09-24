@@ -17,7 +17,7 @@ const LoginForm = () => {
         // Handle login form submission (e.g., authentication)
         console.log('Login form submitted:', formData);
         // Redirect to the signup page
-        router.push('/signup');
+        router.push('/dashboard');
     };
 
     const router = useRouter(); // Initialize the useRouter hook

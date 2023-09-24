@@ -1,14 +1,37 @@
-// components/SignupPage.tsx
-import Link from 'next/link';
-import SignupForm from '../components/SignupForm';
-import MyHeader from '@/components/MyHeader';
+// pages/dashboard.js
 
-const Dashboard = () => {
+import { getSession } from 'next-auth/react';
+import { useRouter } from 'next/router'; // Import the useRouter hook for navigation
+
+export async function getServerSideProps(context) {
+    const session = await getSession(context);
+
+    if (!session) {
+        // If the user is not authenticated, redirect to the login page
+        return {
+            redirect: {
+                destination: '/', // Replace with your login page URL
+                permanent: false,
+            },
+        };
+    }
+
+    return {
+        props: {},
+    };
+}
+
+function Dashboard() {
+    const router = useRouter(); // Initialize the useRouter hook
+
+    // Your dashboard content here
+
     return (
-        <>
-            <MyHeader />
-        </>
+        <div>
+            <h1>Dashboard</h1>
+            {/* Add your dashboard content here */}
+        </div>
     );
-};
+}
 
 export default Dashboard;
